@@ -1,6 +1,7 @@
-"""NIFTY 50 stock universe for SwingTR."""
+"""Stock universes for SwingTR swing trading scanner."""
 
 # Yahoo Finance uses .NS suffix for NSE-listed stocks
+
 NIFTY_50 = [
     "ADANIENT.NS",
     "ADANIPORTS.NS",
@@ -54,7 +55,129 @@ NIFTY_50 = [
     "WIPRO.NS",
 ]
 
+NIFTY_NEXT_50 = [
+    "VEDL.NS",
+    "NAUKRI.NS",
+    "ICICIGI.NS",
+    "BPCL.NS",
+    "HAL.NS",
+    "JSWENERGY.NS",
+    "HAVELLS.NS",
+    "DMART.NS",
+    "CANBK.NS",
+    "BANKBARODA.NS",
+    "CHOLAFIN.NS",
+    "INDHOTEL.NS",
+    "LICI.NS",
+    "MAZDOCK.NS",
+    "IOC.NS",
+    "DLF.NS",
+    "TATAPOWER.NS",
+    "LODHA.NS",
+    "PNB.NS",
+    "ADANIPOWER.NS",
+    "PFC.NS",
+    "VBL.NS",
+    "SOLARINDS.NS",
+    "TVSMOTOR.NS",
+    "DIVISLAB.NS",
+    "HINDZINC.NS",
+    "BAJAJHFL.NS",
+    "RECLTD.NS",
+    "MOTHERSON.NS",
+    "ABB.NS",
+    "GAIL.NS",
+    "AMBUJACEM.NS",
+    "GODREJCP.NS",
+    "TORNTPHARM.NS",
+    "CGPOWER.NS",
+    "HYUNDAI.NS",
+    "JINDALSTEL.NS",
+    "BRITANNIA.NS",
+    "ADANIGREEN.NS",
+    "IRFC.NS",
+    "LTM.NS",
+    "UNITDSPR.NS",
+    "PIDILITIND.NS",
+    "SIEMENS.NS",
+    "ENRIN.NS",
+    "ADANIENSOL.NS",
+    "SHREECEM.NS",
+    "BAJAJHLDNG.NS",
+    "BOSCHLTD.NS",
+    "ZYDUSLIFE.NS",
+]
+
+NIFTY_SMALLCAP_50 = [
+    "MCX.NS",
+    "LAURUSLABS.NS",
+    "KAYNES.NS",
+    "RADICO.NS",
+    "CDSL.NS",
+    "KARURVYSYA.NS",
+    "DELHIVERY.NS",
+    "AMBER.NS",
+    "RPOWER.NS",
+    "ANGELONE.NS",
+    "NH.NS",
+    "AFFLE.NS",
+    "PGEL.NS",
+    "NAVINFLUOR.NS",
+    "MANAPPURAM.NS",
+    "HSCL.NS",
+    "REDINGTON.NS",
+    "IEX.NS",
+    "KFINTECH.NS",
+    "CAMS.NS",
+    "INOXWIND.NS",
+    "WOCKPHARMA.NS",
+    "PPLPHARMA.NS",
+    "NBCC.NS",
+    "BANDHANBNK.NS",
+    "FIVESTAR.NS",
+    "PNBHOUSING.NS",
+    "IIFL.NS",
+    "NEULANDLAB.NS",
+    "POONAWALLA.NS",
+    "ABREL.NS",
+    "AREMNHYD.NS",
+    "ASTERDM.NS",
+    "JBCHEPHARM.NS",
+    "RAMCOCEM.NS",
+    "CROMPTON.NS",
+    "AARTIIND.NS",
+    "CYIENT.NS",
+    "CHOLAHLDNG.NS",
+    "NATCOPHARM.NS",
+    "TATACHEM.NS",
+    "FSL.NS",
+    "ZENSARTECH.NS",
+    "CASTROLIND.NS",
+    "LALPATHLAB.NS",
+    "WELCORP.NS",
+    "KEC.NS",
+    "AEGISLOG.NS",
+    "CESC.NS",
+    "GLAND.NS",
+]
+
 
 def get_nifty50_symbols():
-    """Return the list of NIFTY 50 ticker symbols."""
+    """Return NIFTY 50 ticker symbols."""
     return list(NIFTY_50)
+
+
+def get_nifty_next_50_symbols():
+    """Return NIFTY Next 50 ticker symbols."""
+    return list(NIFTY_NEXT_50)
+
+
+def get_nifty_smallcap_50_symbols():
+    """Return NIFTY Smallcap 50 ticker symbols."""
+    return list(NIFTY_SMALLCAP_50)
+
+
+def get_all_symbols():
+    """Return combined list of all three universes."""
+    combined = set(NIFTY_50 + NIFTY_NEXT_50 + NIFTY_SMALLCAP_50)
+    return sorted(list(combined))
